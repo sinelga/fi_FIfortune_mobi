@@ -1,0 +1,16 @@
+{
+  "name": "fi_FIporno_mobi",
+  "description": "fi_FIporno_mobi",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sinelga/fi_FIporno_mobi",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+  
+    "angular": "latest",
+    "bootstrap": "latest",
+    "fontawesome": "latest",
+    "angular-bootstrap": "latest"
+   	
+  }
+}
