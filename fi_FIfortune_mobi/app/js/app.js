@@ -2,7 +2,7 @@
 
 
 
-var app = angular.module('fi_FIfortune_mobi', []);
+var app = angular.module('fi_FIfortune_mobi', ['controllers']);
 
 //var sampleApp = angular.module('GwAngularJS_desk', ['ngRoute','SeksiChattiController','SeksiChattiFilters','uuids']);
 // 
