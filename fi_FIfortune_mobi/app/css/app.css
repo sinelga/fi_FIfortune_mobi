@@ -1,0 +1,16 @@
+body {
+
+	font-family: 'Annie Use Your Telescope', cursive;
+	text-shadow: 1px 1px 1px #aaa;
+	/* color: blue;*/
+	/* margin: 10px;'*/
+	/* font-size: 100%;*/
+	margin: 5px;
+	color: #428bca;
+}
+
+.zodiacName {
+	font-size: 230%;
+	text-shadow: 4px 4px 4px #aaa;
+}
+

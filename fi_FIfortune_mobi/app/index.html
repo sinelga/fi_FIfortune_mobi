@@ -5,18 +5,25 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Horoskoopit</title>
-<link href="http://fonts.googleapis.com/css?family=Finger+Paint" rel='stylesheet' type='text/css'>
+<link
+	href="http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope"
+	rel='stylesheet' type='text/css'>
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+	rel='stylesheet' type='text/css'>
 <link href="bower_components/fontawesome/css/font-awesome.min.css"
 	rel="stylesheet">
-<link rel="stylesheet"
-	href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="css/app.css">
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+
 <script
 	src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
 <script src="js/app.js"></script>
+<script src="js/zodiacsmaker.js"></script>
 <script src="js/controllers.js"></script>
+
 <!-- <script src="js/filters.js"></script> -->
 <!-- <script src="js/angular-uuid.js"></script> -->
 <!-- <script src="js/angular-loadscript.js"></script> -->
@@ -26,9 +33,62 @@
 
 <body ng-app="fi_FIfortune_mobi">
 
-<div ng-controller="LoadCtrl">
+	<div ng-controller="LoadCtrl">
 
-</div>
+		<div class="container">
+
+
+
+			<div ng-switch="zodiacSelected">
+
+				<div ng-switch-when="false">
+					<div ng-repeat="zodiac in zodiacs" ng-click="selectZodiac(zodiac)">
+						<div class='media'>
+							<img class='media-object pull-left itemimage'
+								ng-src='images/{{zodiac.image}}.png' alt=''> <i
+								class='fa fa-share fa-lg pull-right'></i>
+
+							<div class='media-heading pull-right zodiacName'>{{zodiac.name}}</div>
+
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<div ng-switch-when="true">{{zodiacSelectedObj.name}}</div>
+
+
+
+			</div>
+
+
+
+			<div ng-switch="ctrl.zodiacSelected">
+
+				<div ng-switch-when="false">
+					<div ng-repeat="zodiac in zodiacs" ng-click="selectZodiac(zodiac)">
+
+						<div class='media'>
+							<img class='media-object pull-left itemimage'
+								ng-src='images/{{zodiac.image}}.png' alt=''> <i
+								class='fa fa-share fa-lg pull-right'></i>
+
+							<div class='media-heading pull-right zodiacName'>{{zodiac.name}}</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div ng-switch-when="true"></div>
+
+
+			</div>
+
+		</div>
+
+	</div>
 
 
 

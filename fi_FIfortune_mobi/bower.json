@@ -10,7 +10,8 @@
     "angular": "latest",
     "bootstrap": "latest",
     "fontawesome": "latest",
-    "angular-bootstrap": "latest"
+    "angular-bootstrap": "latest",
+    "angular-animate": "latest"
    	
   }
 }
