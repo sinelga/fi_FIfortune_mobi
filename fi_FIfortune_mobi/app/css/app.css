@@ -14,3 +14,36 @@ body {
 	text-shadow: 4px 4px 4px #aaa;
 }
 
+.phone {
+ /* font-family: 'Annie Use Your Telescope', cursive;*/
+  font-size: 300%;
+  text-shadow: 4px 4px 4px #aaa;
+  color: red !important;
+}
+
+.fortunetellername{
+  /*font-family: 'Annie Use Your Telescope', cursive;*/
+  font-size: 190%;
+  text-shadow: 3px 3px 3px #aaa;
+  color: red !important;
+  
+}
+
+.moto {
+ /* font-family: 'Annie Use Your Telescope', cursive;*/
+  font-size: 100%;
+  text-shadow: 1px 1px 1px #aaa;
+  color: black;
+}
+
+.tellerimage {
+  width: 50%;
+}
+
+.zodicname {
+  display: block;
+  margin-right: 20px;
+  /*font-family: 'Annie Use Your Telescope', cursive; */
+  font-size: 210%;
+  text-shadow: 4px 4px 4px #aaa;
+}

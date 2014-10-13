@@ -15,14 +15,19 @@
 
 <link rel="stylesheet" href="css/app.css">
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
+<!-- <script src="bower_components/angular-animate/angular-animate.js"></script> -->
 
 <script
 	src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
 <script src="js/app.js"></script>
-<script src="js/zodiacsmaker.js"></script>
+<script src="js/services/zodiacsmaker.js"></script>
+<script src="js/services/luckytellersmaker.js"></script>
+<!-- <script src="js/services/remoterequests.js"></script> -->
+<!-- <script src="js/providers/providers.js"></script> -->
+<script src="js/factoris/factoris.js"></script>
 <script src="js/controllers.js"></script>
+
 
 <!-- <script src="js/filters.js"></script> -->
 <!-- <script src="js/angular-uuid.js"></script> -->
@@ -36,8 +41,6 @@
 	<div ng-controller="LoadCtrl">
 
 		<div class="container">
-
-
 
 			<div ng-switch="zodiacSelected">
 
@@ -57,41 +60,74 @@
 
 				</div>
 
-				<div ng-switch-when="true">{{zodiacSelectedObj.name}}</div>
+				<div ng-switch-when="true">
 
+					<i class="fa fa-times-circle fa-2x pull-right"
+						ng-click='closeLuckyteller()'></i> <a class="phone"
+						href="tel:{{luckyteller.phone}}"> {{luckyteller.phone}}</a>
 
+					<div class="media">
 
-			</div>
+						<img class="media-object tellerimage pull-left"
+							ng-src='images/shadow-fortuneteller{{luckytellerId}}.jpg' alt="">
 
+						<div class="media-body">
+							<div class="media-heading fortunetellername">
+								{{luckyteller.name}}
+								<div class="homelocation">
+									<i class="fa fa-home"></i>{{luckyteller.location}}
+								</div>
 
-
-			<div ng-switch="ctrl.zodiacSelected">
-
-				<div ng-switch-when="false">
-					<div ng-repeat="zodiac in zodiacs" ng-click="selectZodiac(zodiac)">
-
-						<div class='media'>
-							<img class='media-object pull-left itemimage'
-								ng-src='images/{{zodiac.image}}.png' alt=''> <i
-								class='fa fa-share fa-lg pull-right'></i>
-
-							<div class='media-heading pull-right zodiacName'>{{zodiac.name}}</div>
+							</div>
+							<div class="moto">{{luckyteller.moto}}</div>
 
 						</div>
 
 					</div>
+					
+					<div class="media">
+					<img class="media-object itemimage30 pull-left"
+							ng-src='images/{{zodiacSelectedObj.image}}.png' alt="">
+							
+							<div class="media-body zodicname">
+							
+								{{zodiacSelectedObj.name}}
+							</div>
+					
+					</div>
+					
+					<div class="moto">{{zodiacdesc}}</div> 
+
+
+
+					<!-- 					<div class="media">
+
+						<img class="media-object itemimage30 pull-left"
+							ng-src='images/{{zodiacSelectedObj.image}}.png' alt="">
+
+						<div class="media-body">
+							<div
+								class="media-heading>
+									{{zodiacSelectedObj.image}}
+								</div>
+							</div>
+
+						</div>
+						<div class="moto">{{zodiacdesc}}</div> -->
+
+
+
+
+
 				</div>
-				<div ng-switch-when="true"></div>
+
+
+
 
 
 			</div>
 
 		</div>
-
-	</div>
-
-
-
 </body>
 
 </html>

@@ -22,7 +22,6 @@ zodiacsmaker.service("makezodiacs", function() {
    {name:'Jousimies',image:'sagittarius',link:'horoskooppi-jousimies-2311-2112',defzodiac:'Jousimiehet ovat eläinradan suuria optimisteja, jotka ovat valmiita tekemään paljon töitä tulevaisuudessa häämöttävien mahdollisuuksien ja menestyksen eteen. Jokaisella jousimiehellä on oma vahva filosofiansa ja vankkumaton luottamus omiin ideoihinsa ja haaveisiinsa.'}
              
 ]
-	
-	
+		
 });
 
